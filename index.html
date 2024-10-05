@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Font-awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css" />
+    <title>Shopping Cart</title>
+  </head>
+  <body>
+    <section class="container">
+      <!-- Cart Header -->
+      <div class="cart-header">
+        <span class="cart-icon"><i class="fa-solid fa-bag-shopping"></i></span>
+        <span id="cart-count-text">My Cart Items (0)</span>
+      </div>
+
+      <!-- Cart Items List -->
+      <ul class="cart-items" id="cart-items">
+        <!-- Cart Items will be injected by JavaScript -->
+      </ul>
+
+      <!-- Total Amount Section -->
+      <div class="total-section">
+        <h3>Total: ₦<span id="total-price">0.00</span></h3>
+      </div>
+
+      <!-- Checkout Section -->
+      <div class="checkout-section">
+        <button
+          id="checkout-btn"
+          onclick="cart.proceedToCheckout()"
+          aria-label="Proceed to checkout"
+        >
+          Proceed to Checkout
+        </button>
+      </div>
+    </section>
+
+    <!-- Thank You Modal -->
+    <div id="thank-you-modal" class="modal">
+      <h2>Thank You for Your Purchase!</h2>
+      <p>Your order has been placed successfully. We appreciate your business.</p>
+      <button onclick="cart.closeThankYouMessage()">Close</button>
+    </div>
+
+    <!-- Overlay -->
+    <div id="modal-overlay" class="modal-overlay"></div>
+
+    <!-- Empty Cart Modal -->
+    <div id="empty-cart-modal" class="modal">
+      <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <h2>😔 Sorry, your cart is empty!</h2>
+        <p>Add items to your cart to continue shopping.</p>
+        <button id="continue-shopping" class="modal-btn">
+          Continue Shopping
+        </button>
+      </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="./app.js"></script>
+  </body>
+</html>
