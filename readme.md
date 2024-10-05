@@ -1,5 +1,5 @@
-# Simple shopping cart functionality with javascript
+# Simple shopping cart functionality with javascript OOP
 This functionalities include:
 - Increment items
 - Decrement items
-- Delete items from cart, etc.# gmc-shopping-cart-oop
+- Delete items from cart, etc.
